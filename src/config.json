@@ -1,0 +1,73 @@
+{
+    "name": "Fastlane",
+    "viewName": "Fastlane",
+    "type": "executer",
+    "execProgram": "node",
+    "main": "app.js",
+    "version": "1.0.0",
+    "imgUrl": "fastlane.png",
+    "description": "Integration with Fastlane.",
+    "category": "CI/CD",
+    "keywords": [
+        "fastlane",
+        "clonerepo",
+        "build",
+        "job"
+        ],
+    "settings": [
+      {
+        "name": "repoURL",
+        "viewName": "repo Url for code to be build",
+        "type": "string"
+      },
+      {
+        "name": "workingDir",
+        "viewName": "Local Directory path where build project <workingDir>/<repoName>/<projectName> will be created",
+        "type": "string"
+      },
+      {
+        "name": "repoName",
+        "viewName": "repoName where build project path <workingDir>/<repoName>/<projectName> will be created",
+        "type": "string"
+      },
+      {
+        "name": "projectName",
+        "viewName": "projectName where build project path <workingDir>/<repoName>/<projectName> will be created",
+        "type": "string"
+      }
+    ],
+    "methods": [
+      {
+        "name": "listWorkingDir",
+        "viewName": "List files",
+        "params": [
+          {
+            "name": "PATH",
+            "viewName": "Path to list",
+            "placeholder": "/",
+            "type": "string"
+          },
+          {
+            "name": "PARAMETERS",
+            "description": "Pass a key-value code object of parameters. For example {param1: 'paramValue'}",
+            "placeholder": "{param1: 'paramValue'}",
+            "viewName": "Parameters (Object)",
+            "type": "string",
+            "learnUrl": "https://www.google.co.in/" 
+          }         
+        ]
+      },
+      {
+        "name": "echoAll",
+        "viewName": "Echo All Data",
+        "params": [
+          {
+            "name": "echoWord",
+            "viewName": "default echo text",
+            "placeholder": "All Data dummy Text",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+}
